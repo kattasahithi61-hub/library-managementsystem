@@ -1,0 +1,122 @@
+.book-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e7eae4;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(34, 48, 37, 0.035);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(34, 48, 37, 0.08);
+}
+
+.book-cover {
+  height: 190px;
+}
+
+.book-card-body {
+  padding: 14px 14px 13px;
+}
+
+.book-category {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #7d8b72;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.book-card-body h2 {
+  display: -webkit-box;
+  min-height: 38px;
+  overflow: hidden;
+  margin: 7px 0 4px;
+  color: #344136;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.28;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.book-author {
+  overflow: hidden;
+  margin: 0;
+  color: #858e84;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-copies-available {
+  margin: 12px 0 0;
+  color: #557357;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.book-card-actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.book-card-actions button {
+  min-width: 0;
+  min-height: 34px;
+  padding: 0 8px;
+  border: 1px solid #e2e7df;
+  border-radius: 6px;
+  background: #fff;
+  color: #566550;
+  cursor: pointer;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.book-card-actions button:hover {
+  border-color: #bdcbb7;
+  background: #f7f9f5;
+}
+
+.book-card-actions .book-details-button {
+  flex: 1;
+}
+
+.book-card-actions .book-issue-button {
+  border-color: #2d4934;
+  background: #2d4934;
+  color: #fff;
+}
+
+.book-card-actions .book-issue-button:hover {
+  border-color: #203b28;
+  background: #203b28;
+}
+
+@media (max-width: 480px) {
+  .book-cover {
+    height: 165px;
+  }
+
+  .book-card-body {
+    padding: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-card {
+    transition: none;
+  }
+}

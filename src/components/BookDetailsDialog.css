@@ -1,0 +1,173 @@
+.book-dialog-backdrop {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: grid;
+  overflow: auto;
+  place-items: center;
+  padding: 22px;
+  background: rgba(20, 33, 24, 0.48);
+}
+
+.book-dialog {
+  position: relative;
+  width: min(100%, 510px);
+  padding: 29px;
+  border: 1px solid #e7eae4;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(14, 25, 16, 0.22);
+}
+
+.book-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #f4f6f2;
+  color: #667166;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.book-dialog-heading {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.book-dialog-cover {
+  height: 142px;
+  border-radius: 7px;
+}
+
+.book-dialog-eyebrow {
+  margin: 0 0 9px;
+  color: #7d8b72;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.book-dialog h2 {
+  margin: 0;
+  color: #304033;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 5vw, 31px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.book-dialog-author {
+  margin: 7px 0 0;
+  color: #828b81;
+  font-size: 11px;
+}
+
+.book-dialog-section-label {
+  margin: 19px 0 4px;
+  color: #929a91;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.book-dialog-description {
+  margin: 0 0 19px;
+  color: #687368;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.book-dialog-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 18px;
+  margin: 0;
+  padding: 16px 0;
+  border-top: 1px solid #edf0ea;
+  border-bottom: 1px solid #edf0ea;
+}
+
+.book-dialog-details > div {
+  min-width: 0;
+}
+
+.book-dialog-details dt {
+  margin-bottom: 5px;
+  color: #929a91;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.book-dialog-details dd {
+  overflow-wrap: anywhere;
+  margin: 0;
+  color: #465348;
+  font-size: 10px;
+}
+
+.book-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.book-dialog-actions button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid #e2e7df;
+  border-radius: 6px;
+  background: #fff;
+  color: #566550;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.book-dialog-actions .book-dialog-primary {
+  border-color: #2d4934;
+  background: #2d4934;
+  color: #fff;
+}
+
+.book-dialog-actions .book-dialog-primary:disabled {
+  border-color: #e2e7df;
+  background: #f3f5f1;
+  color: #8d958b;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .book-dialog {
+    padding: 24px 19px;
+  }
+
+  .book-dialog-details {
+    gap: 12px;
+  }
+
+  .book-dialog-heading {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 13px;
+    padding-right: 13px;
+  }
+
+  .book-dialog-cover {
+    height: 116px;
+  }
+}

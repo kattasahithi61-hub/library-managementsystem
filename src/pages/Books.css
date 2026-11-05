@@ -1,0 +1,247 @@
+.books-page {
+  width: 100%;
+}
+
+.books-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.books-heading-copy > p {
+  margin: 0 0 8px;
+  color: #79886f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.books-heading-copy h1 {
+  margin: 0;
+  color: #25342a;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 39px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.books-heading-copy > span {
+  display: block;
+  margin-top: 8px;
+  color: #7f897f;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.book-categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 7px;
+  margin: 0 0 20px;
+  padding: 2px 0 7px;
+  scrollbar-width: thin;
+}
+
+.book-category-filter {
+  min-height: 33px;
+  flex: 0 0 auto;
+  padding: 0 12px;
+  border: 1px solid #e6e9e3;
+  border-radius: 20px;
+  background: #fff;
+  color: #707b70;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+  transition: border-color 130ms ease, background 130ms ease, color 130ms ease;
+}
+
+.book-category-filter:hover {
+  border-color: #bfcdb9;
+  color: #42593f;
+}
+
+.book-category-filter--active {
+  border-color: #304b36;
+  background: #304b36;
+  color: #fff;
+}
+
+.book-category-filter--active:hover {
+  border-color: #304b36;
+  background: #304b36;
+  color: #fff;
+}
+
+.books-results-heading {
+  display: flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+  color: #8b948a;
+  font-size: 9px;
+}
+
+.books-results-heading strong {
+  color: #59665a;
+  font-weight: 600;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.books-state {
+  display: flex;
+  min-height: 245px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border: 1px solid #e7eae4;
+  border-radius: 11px;
+  background: #fff;
+  text-align: center;
+}
+
+.books-state h2 {
+  margin: 0 0 7px;
+  color: #3a483c;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.books-state p {
+  max-width: 390px;
+  margin: 0;
+  color: #858e84;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.books-state-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+  place-items: center;
+  border-radius: 13px;
+  background: #f0f3eb;
+  color: #65795b;
+}
+
+.books-state-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.books-state--error {
+  border-color: #efd9d5;
+  background: #fffdfc;
+}
+
+.books-state--error .books-state-icon {
+  background: #fbefed;
+  color: #a65c4e;
+}
+
+.books-state-action {
+  margin-top: 15px;
+  padding: 8px 13px;
+  border: 1px solid #dfe5dc;
+  border-radius: 6px;
+  background: #fff;
+  color: #51694b;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.books-state-action:hover {
+  background: #f4f7f1;
+}
+
+.books-spinner {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 12px;
+  border: 2px solid #e5e9e1;
+  border-top-color: #647d58;
+  border-radius: 50%;
+  animation: books-spin 700ms linear infinite;
+}
+
+@keyframes books-spin {
+  to { transform: rotate(360deg); }
+}
+
+.books-results-summary {
+  margin: 16px 0 0;
+  color: #9aa198;
+  font-size: 9px;
+}
+
+.book-request-notice {
+  margin-bottom: 16px;
+  padding: 11px 13px;
+  border: 1px solid #e6e9e1;
+  border-radius: 7px;
+  background: #f4f6f1;
+  color: #65705f;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.book-request-notice--error {
+  border-color: #edd5d0;
+  background: #fff7f5;
+  color: #985146;
+}
+
+@media (max-width: 1120px) {
+  .books-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .books-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-cover {
+    height: 195px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .books-spinner {
+    animation-duration: 2s;
+  }
+}

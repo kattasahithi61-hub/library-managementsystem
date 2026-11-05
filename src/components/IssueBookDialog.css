@@ -1,0 +1,170 @@
+.issue-confirm-backdrop {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: grid;
+  overflow: auto;
+  place-items: center;
+  padding: 18px;
+  background: rgba(20, 33, 24, 0.48);
+}
+
+.issue-confirm-dialog {
+  position: relative;
+  width: min(100%, 470px);
+  padding: 26px;
+  border: 1px solid #e6e9e3;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(14, 25, 16, 0.22);
+}
+
+.issue-confirm-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #f3f5f1;
+  color: #667166;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.issue-confirm-close:disabled {
+  cursor: wait;
+}
+
+.issue-confirm-eyebrow {
+  margin: 0 0 7px;
+  color: #79886f;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.issue-confirm-dialog h2 {
+  margin: 0;
+  color: #304033;
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.issue-confirm-book-title {
+  margin: 19px 0 3px;
+  color: #3d4b3f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.issue-confirm-author {
+  margin: 0;
+  color: #818a80;
+  font-size: 10px;
+}
+
+.issue-confirm-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin: 20px 0 0;
+}
+
+.issue-confirm-details div {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #edf0ea;
+  border-radius: 7px;
+  background: #fafbf9;
+}
+
+.issue-confirm-details dt {
+  margin-bottom: 5px;
+  color: #8a9388;
+  font-size: 8px;
+}
+
+.issue-confirm-details dd {
+  margin: 0;
+  color: #465448;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.issue-fine-policy {
+  margin: 14px 0 0;
+  color: #7f887d;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.issue-confirm-error {
+  margin: 13px 0 0;
+  padding: 9px 10px;
+  border: 1px solid #efd9d5;
+  border-radius: 6px;
+  background: #fff7f5;
+  color: #984b40;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.issue-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 21px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0ea;
+}
+
+.issue-confirm-actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #e0e5dd;
+  border-radius: 6px;
+  background: #fff;
+  color: #5e6a5e;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.issue-confirm-actions .issue-confirm-primary {
+  border-color: #2d4934;
+  background: #2d4934;
+  color: #fff;
+}
+
+.issue-confirm-actions button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .issue-confirm-backdrop {
+    align-items: end;
+    padding: 0;
+  }
+
+  .issue-confirm-dialog {
+    width: 100%;
+    padding: 23px 18px 20px;
+    border-radius: 13px 13px 0 0;
+  }
+
+  .issue-confirm-details {
+    gap: 6px;
+  }
+
+  .issue-confirm-details div {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,257 @@
+.my-books-page {
+  width: 100%;
+}
+
+.my-books-header {
+  margin-bottom: 22px;
+}
+
+.my-books-header > p {
+  margin: 0 0 7px;
+  color: #79886f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.my-books-header h1 {
+  margin: 0;
+  color: #25342a;
+  font-family: var(--font-display);
+  font-size: clamp(29px, 4vw, 37px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.my-books-header span {
+  display: block;
+  margin-top: 7px;
+  color: #7f897f;
+  font-size: 10px;
+}
+
+.my-books-tabs {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 19px;
+}
+
+.my-books-tabs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid #e5e9e2;
+  border-radius: 20px;
+  background: #fff;
+  color: #59665a;
+  font-size: 9px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.my-books-tabs a span {
+  color: #8d978b;
+}
+
+.my-books-section {
+  overflow: hidden;
+  margin-top: 18px;
+  border: 1px solid #e7eae4;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.my-books-section-heading {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf0ea;
+}
+
+.my-books-section-heading h2 {
+  margin: 0;
+  color: #38463a;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.my-books-table-wrap {
+  overflow-x: auto;
+}
+
+.my-books-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.my-books-table th {
+  padding: 10px 12px;
+  background: #fafbf9;
+  color: #899287;
+  font-size: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.my-books-table td {
+  padding: 12px;
+  border-top: 1px solid #eff1ed;
+  color: #657065;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.my-books-title {
+  min-width: 240px;
+  white-space: normal !important;
+}
+
+.my-books-book-cell {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-books-cover {
+  width: 42px;
+  height: 56px;
+  flex: 0 0 auto;
+  border: 1px solid #e6e9e2;
+  border-radius: 4px;
+}
+
+.my-books-cover .library-book-cover-fallback {
+  width: 88%;
+  min-height: 0;
+  height: 88%;
+  gap: 2px;
+  padding: 3px;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.my-books-cover .library-book-cover-fallback svg {
+  width: 17px;
+  height: 17px;
+}
+
+.my-books-cover .library-book-cover-fallback span {
+  display: none;
+}
+
+.my-books-cover .library-book-cover-fallback strong {
+  font-size: 5px;
+  -webkit-line-clamp: 2;
+}
+
+.my-books-book-cell > span {
+  min-width: 0;
+}
+
+.my-books-title strong,
+.my-books-title small {
+  display: block;
+}
+
+.my-books-title strong {
+  color: #3d4b3f;
+  font-size: 10px;
+}
+
+.my-books-title small {
+  margin-top: 4px;
+  color: #929a91;
+  font-size: 8px;
+}
+
+.my-books-status {
+  display: inline-flex;
+  padding: 5px 7px;
+  border-radius: 12px;
+  background: #edf4ee;
+  color: #55725a;
+  font-size: 8px;
+  text-transform: capitalize;
+}
+
+.my-books-status--overdue {
+  background: #fff0ed;
+  color: #a34d41;
+}
+
+.my-books-return-button {
+  min-height: 28px;
+  padding: 0 8px;
+  border: 1px solid #dfe6dc;
+  border-radius: 5px;
+  background: #fff;
+  color: #526b4c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.my-books-return-button:hover {
+  background: #f4f7f1;
+}
+
+.my-books-return-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.my-books-state {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 22px;
+  color: #879084;
+  font-size: 10px;
+  text-align: center;
+}
+
+.my-books-state strong {
+  color: #435044;
+  font-size: 11px;
+}
+
+.my-books-state--error {
+  color: #994c42;
+}
+
+.my-books-state button {
+  margin-top: 6px;
+  padding: 7px 10px;
+  border: 1px solid #e3e7e1;
+  border-radius: 5px;
+  background: #fff;
+  color: #526b4c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+}
+
+.my-books-notice,
+.my-books-error {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid #e0e9dd;
+  border-radius: 6px;
+  background: #f3f7f1;
+  color: #567151;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.my-books-error {
+  border-color: #edd5d0;
+  background: #fff7f5;
+  color: #985146;
+}

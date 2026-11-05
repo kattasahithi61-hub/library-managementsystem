@@ -1,0 +1,305 @@
+.app-navbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px;
+  border-bottom: 1px solid #e8ebe6;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand-area,
+.navbar-actions,
+.app-brand,
+.profile-trigger {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand-area {
+  gap: 14px;
+}
+
+.app-brand {
+  gap: 11px;
+  color: #23392c;
+  text-decoration: none;
+}
+
+.app-logo-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #e8e2d2;
+  border-radius: 12px;
+  background: #f5f2e9;
+  color: #516847;
+}
+
+.app-logo-mark svg {
+  width: 25px;
+  height: 25px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.app-brand strong,
+.app-brand small {
+  display: block;
+}
+
+.app-brand strong {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.app-brand small {
+  margin-top: 3px;
+  color: #899187;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.navbar-actions {
+  gap: 21px;
+}
+
+.navbar-icon-button {
+  position: relative;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 9px;
+  color: #59665c;
+}
+
+.navbar-icon-button:hover {
+  background: #f3f5f1;
+}
+
+.navbar-icon-button svg,
+.navbar-logout svg,
+.mobile-menu-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.notification-indicator {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #b27855;
+}
+
+.profile-menu-wrap {
+  position: relative;
+}
+
+.profile-trigger {
+  gap: 9px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #344239;
+  cursor: pointer;
+  font: inherit;
+}
+
+.profile-avatar {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf0e7;
+  color: #4b6646;
+}
+
+.profile-avatar svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.profile-label {
+  max-width: 150px;
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-chevron {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #8a928b;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 13px);
+  right: 0;
+  display: grid;
+  width: 160px;
+  padding: 6px;
+  border: 1px solid #e7e9e3;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(34, 48, 37, 0.12);
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #3e4b40;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: #f3f5f1;
+}
+
+.navbar-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid #e5e8e2;
+  border-radius: 7px;
+  background: #fff;
+  color: #566257;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.navbar-logout:hover {
+  border-color: #cfd8cb;
+  background: #f7f9f5;
+  color: #2f4a35;
+}
+
+.navbar-logout svg {
+  width: 16px;
+  height: 16px;
+}
+
+.mobile-menu-button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #46564a;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .app-navbar {
+    min-height: 66px;
+    padding: 0 17px;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+  }
+
+  .navbar-brand-area {
+    gap: 7px;
+  }
+
+  .app-brand {
+    gap: 8px;
+  }
+
+  .app-logo-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .app-brand strong {
+    font-size: 13px;
+  }
+
+  .app-brand small {
+    font-size: 7px;
+  }
+
+  .navbar-actions {
+    gap: 9px;
+  }
+
+  .profile-label,
+  .profile-chevron,
+  .navbar-logout span {
+    display: none;
+  }
+
+  .profile-trigger {
+    padding: 0;
+  }
+
+  .navbar-logout {
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-navbar {
+    padding: 0 10px;
+  }
+
+  .app-brand strong {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .navbar-actions {
+    gap: 3px;
+  }
+}

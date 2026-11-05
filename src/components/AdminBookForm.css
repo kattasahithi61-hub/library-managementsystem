@@ -1,0 +1,204 @@
+.admin-book-form-backdrop {
+  position: fixed;
+  z-index: 85;
+  inset: 0;
+  display: grid;
+  overflow: auto;
+  place-items: center;
+  padding: 18px;
+  background: rgba(20, 33, 24, 0.48);
+}
+
+.admin-book-form-dialog {
+  width: min(100%, 720px);
+  max-height: min(92vh, 850px);
+  overflow-y: auto;
+  border: 1px solid #e6e9e3;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(14, 25, 16, 0.22);
+}
+
+.admin-book-form-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 21px 24px 17px;
+  border-bottom: 1px solid #edf0ea;
+  background: #fff;
+}
+
+.admin-book-form-header p {
+  margin: 0 0 6px;
+  color: #7d8b72;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.admin-book-form-header h2 {
+  margin: 0;
+  color: #304033;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.admin-dialog-close {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #f3f5f1;
+  color: #667166;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.admin-book-form {
+  padding: 20px 24px 22px;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-form-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-form-field--full {
+  grid-column: 1 / -1;
+}
+
+.admin-form-field label {
+  color: #4a574b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.admin-form-field label span {
+  color: #a35346;
+}
+
+.admin-form-field input,
+.admin-form-field select,
+.admin-form-field textarea {
+  width: 100%;
+  min-height: 39px;
+  padding: 9px 10px;
+  border: 1px solid #e0e5dd;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+  color: #344136;
+  font: inherit;
+  font-size: 10px;
+}
+
+.admin-form-field textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.admin-form-field input:focus,
+.admin-form-field select:focus,
+.admin-form-field textarea:focus {
+  border-color: #83977a;
+  box-shadow: 0 0 0 3px rgba(87, 116, 77, 0.1);
+}
+
+.admin-form-field [aria-invalid='true'] {
+  border-color: #c76b5e;
+}
+
+.admin-form-field small {
+  color: #a04438;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.admin-form-server-error {
+  margin: 15px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #efd9d5;
+  border-radius: 6px;
+  background: #fff7f5;
+  color: #984b40;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.admin-book-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 21px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0ea;
+}
+
+.admin-book-form-actions button {
+  min-height: 37px;
+  padding: 0 13px;
+  border: 1px solid #e0e5dd;
+  border-radius: 6px;
+  background: #fff;
+  color: #5e6a5e;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.admin-book-form-actions .admin-primary-button {
+  border-color: #2d4934;
+  background: #2d4934;
+  color: #fff;
+}
+
+.admin-book-form-actions button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 560px) {
+  .admin-book-form-backdrop {
+    align-items: end;
+    padding: 0;
+  }
+
+  .admin-book-form-dialog {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 13px 13px 0 0;
+  }
+
+  .admin-book-form-header {
+    padding: 17px 18px 14px;
+  }
+
+  .admin-book-form {
+    padding: 17px 18px 20px;
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .admin-form-field--full {
+    grid-column: auto;
+  }
+}

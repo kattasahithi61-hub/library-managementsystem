@@ -1,0 +1,98 @@
+.activity-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activity-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f1ed;
+}
+
+.activity-item:last-child {
+  border-bottom: 0;
+}
+
+.activity-icon {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  place-items: center;
+  border-radius: 9px;
+  background: #eff3eb;
+  color: #5f7857;
+  font-size: 15px;
+}
+
+.activity-icon--returned {
+  background: #edf4ef;
+  color: #5d8064;
+}
+
+.activity-icon--renewed {
+  background: #eef2f4;
+  color: #617683;
+}
+
+.activity-icon--fine {
+  background: #f8f1e8;
+  color: #a17b51;
+}
+
+.activity-copy {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.activity-copy strong,
+.activity-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-copy strong {
+  color: #414e43;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.activity-copy small {
+  color: #899187;
+  font-size: 9px;
+}
+
+.activity-date {
+  margin-left: auto;
+  color: #999f97;
+  font-size: 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.dashboard-empty-note {
+  margin: 0;
+  padding: 20px 10px;
+  color: #8b948a;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .activity-item {
+    gap: 8px;
+  }
+
+  .activity-date {
+    max-width: 76px;
+    white-space: normal;
+  }
+}

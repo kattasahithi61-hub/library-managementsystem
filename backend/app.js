@@ -17,6 +17,7 @@ const configuredOrigins = [process.env.CLIENT_ORIGINS, process.env.CLIENT_ORIGIN
   .filter(Boolean)
   .flatMap((origins) => origins.split(',').map((origin) => origin.trim()).filter(Boolean))
 const allowedOrigins = new Set([
+  'https://library-managementsystem-zeta.vercel.app',
   'http://localhost:5173',
   'http://127.0.0.1:5173',
   'http://localhost:4175',

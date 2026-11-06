@@ -12,8 +12,8 @@ async function startServer() {
     throw new Error('JWT_SECRET must be set to a randomly generated secret with at least 32 characters.')
   }
 
-  const server = app.listen(port, () => {
-    console.log(`Library API listening on http://localhost:${port}`)
+  const server = app.listen(port, '0.0.0.0', () => {
+    console.log(`Library API listening on port ${port}`)
   })
 
   try {

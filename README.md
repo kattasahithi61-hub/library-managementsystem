@@ -6,25 +6,20 @@ React + Vite frontend and Express/Mongoose backend for the library student regis
 
 - Node.js 20.19+ (Node.js 24 recommended)
 - npm
-- MongoDB Community Server running locally, or a MongoDB Atlas cluster URI
+- A MongoDB Atlas cluster
 
-## Configure MongoDB
+## Configure MongoDB Atlas
 
 Edit `backend/.env` and set `MONGODB_URI`.
 
-For a local MongoDB installation, the provided default is:
+Create an Atlas database user and allow your current IP address in the Atlas Network Access list. Then copy the Atlas connection string into `backend/.env`, replacing the placeholders with your database username, password, and cluster host:
 
 ```env
-MONGODB_URI=mongodb://127.0.0.1:27017/college_library
+MONGODB_URI=mongodb+srv://<db-username>:<db-password>@<cluster-host>/college_library?retryWrites=true&w=majority
+MONGODB_SERVER_SELECTION_TIMEOUT_MS=10000
 ```
 
-For Atlas, use the connection string from your cluster, for example:
-
-```env
-MONGODB_URI=mongodb+srv://<db-user>:<db-password>@<cluster-host>/college_library?retryWrites=true&w=majority
-```
-
-Replace the placeholders with your own database user, password, and cluster host. Keep real credentials in `backend/.env`; `.env` files are ignored by Git. Add development frontend origins as a comma-separated list in `CLIENT_ORIGINS` if they differ from the provided Vite origins.
+Keep real credentials in `backend/.env`; `.env` files are ignored by Git. URL-encode special characters in the password (for example, use `%40` for `@`). Add development frontend origins as a comma-separated list in `CLIENT_ORIGINS` if they differ from the provided Vite origins.
 
 ## Start the backend
 
@@ -35,6 +30,8 @@ npm run dev --prefix backend
 ```
 
 The API starts at `http://localhost:5055`. Check `http://localhost:5055/api/health` for backend and MongoDB status. It returns HTTP 200 when MongoDB is connected and HTTP 503 with `backend: "running"` and the MongoDB state when the database is unavailable.
+
+On startup, the API adds its 20 default catalogue books if they are missing. Each book includes an Open Library cover-image URL. Existing books are never overwritten. You can also run the seed manually with `npm run seed-books --prefix backend`.
 
 ## Start the frontend
 

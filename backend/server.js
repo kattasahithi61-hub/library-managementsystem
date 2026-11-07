@@ -3,6 +3,7 @@ import app from './app.js'
 import Book from './models/Book.js'
 import Issue from './models/Issue.js'
 import User from './models/User.js'
+import { ensureDefaultBooks } from './data/defaultBooks.js'
 const port = Number(process.env.PORT) || 5055
 
 async function startServer() {
@@ -23,7 +24,9 @@ async function startServer() {
     await User.init()
     await Book.init()
     await Issue.init()
+    const catalogue = await ensureDefaultBooks()
     console.log('MongoDB connected and model indexes are ready.')
+    console.log(`Default catalogue ready: ${catalogue.added} added, ${catalogue.existing} already present.`)
   } catch (error) {
     console.error('MongoDB connection failed; the API is running in degraded mode.', error)
   }

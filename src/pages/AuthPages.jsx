@@ -7,6 +7,7 @@ import FormField from '../components/FormField.jsx'
 import PasswordField from '../components/PasswordField.jsx'
 import PasswordRules from '../components/PasswordRules.jsx'
 import { getPasswordChecks } from '../utils/passwordValidation.js'
+import { API_BASE_URL } from '../services/apiConfig.js'
 import {
   changeAccountPassword,
   resetAccountPassword,
@@ -16,7 +17,6 @@ import {
 import '../App.css'
 
 const REGISTER_NUMBER_PATTERN = /^[A-Za-z0-9]{10}$/
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
 function getRegisterNumberError(value) {
   if (!value.trim()) return 'Enter your register number.'
